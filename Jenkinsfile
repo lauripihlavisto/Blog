@@ -128,8 +128,8 @@ pipeline {
                       --user "$(id -u):$(id -g)" \
                       -v "$WORKSPACE/reports:/tmp/reports" \
                       "$NIKTO_IMAGE" -h http://blog:3000 \
-                      -Format htm -output /tmp/reports/nikto.html
-                    test -s reports/nikto.html
+                      -Format htm -output /tmp/reports/nikto.htm
+                    test -s reports/nikto.htm
                 '''
             }
         }
